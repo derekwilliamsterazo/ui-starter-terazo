@@ -1,16 +1,36 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+
+import { createRoot } from 'react-dom/client';
+
+import CssBaseline from '@mui/material/CssBaseline';
+import { ThemeProvider } from '@mui/material/styles';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import theme from './themes/theme.light'
 
-const root = ReactDOM.createRoot(
+declare module '@mui/material/styles' {
+  interface Theme {
+    status: {
+      danger: string;
+    };
+  }
+  // allow configuration using `createTheme`
+  interface ThemeOptions {
+    status?: {
+      danger?: string;
+    };
+  }
+}
+
+const root = createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
-  <React.StrictMode>
+  <ThemeProvider theme={theme}>
+    {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+    <CssBaseline />
     <App />
-  </React.StrictMode>
+  </ThemeProvider>,
 );
 
 // If you want to start measuring performance in your app, pass a function
