@@ -1,0 +1,20 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: gray;
+
+   .branding {
+    background: plum;
+    height: 24px;
+    img {height: -webkit-fill-available;}
+   }
+   .search {
+    //background: aqua;
+    flex:content;
+   }
+   .user {
+    background: navy;
+   }
+}
