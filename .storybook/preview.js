@@ -1,7 +1,18 @@
 
 // import { CssBaseline, ThemeProvider } from "@mui/material";
-// import { darkTheme } from "../src/themes/theme.dark";
-// import { muiTheme } from 'storybook-addon-material-ui'
+import {ThemeProvider, CssBaseline} from '@material-ui/core';
+import { darkTheme } from "../src/themes/theme.dark";
+import { lightTheme } from "../src/themes/theme.light";
+
+export const decorators = [
+  (Story) => (  
+
+      <ThemeProvider theme={lightTheme}>       
+        <CssBaseline />
+        <Story />
+      </ThemeProvider>
+  ),
+];
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -12,16 +23,3 @@ export const parameters = {
     },
   },
 }
-
-// export const withMuiTheme = (Story) => (
-//   <ThemeProvider theme={darkTheme}>
-//     <CssBaseline />
-//     <Story />
-//   </ThemeProvider>
-// );
-
-// export const decorators = [withMuiTheme];
-
-// export const decorators = [
-// 	muiTheme([darkTheme])
-// ];

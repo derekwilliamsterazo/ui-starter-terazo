@@ -1,5 +1,5 @@
 
-import logo from './logo.svg';
+
 import './App.css';
 
 import {Header} from './components/header/Header'
@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <Header/>
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>

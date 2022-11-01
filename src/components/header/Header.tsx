@@ -25,7 +25,7 @@ export const Header = ({
     px:{xs: 2, sm: 3, md: 6},
     py: 2,
     gap:3,
-    backgroundColor:"brand.black"
+    backgroundColor:'brand.black'
   }
 
 

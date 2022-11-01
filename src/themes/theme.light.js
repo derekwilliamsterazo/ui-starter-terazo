@@ -1,5 +1,4 @@
-
-import { createTheme } from '@mui/material/styles';
+import { createTheme } from '@material-ui/core'
 
 const brand = {
 
@@ -27,7 +26,7 @@ const lightTheme = createTheme({
     brand: {
          yellow: brand.yellow,
          red: brand.red,
-         black: brand.black,
+         black: '#2D2926',
          grey: brand.gray,
     },
     comp: {
